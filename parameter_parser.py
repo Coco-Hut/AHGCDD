@@ -76,7 +76,7 @@ def parameter_parser():
     parser.add_argument("--train_prop", type=float, default=0.5)
     parser.add_argument("--valid_prop", type=float, default=0.25)
 
-    parser.add_argument("--cond_method", default="ahgcond")
+    parser.add_argument("--cond_method", default="ahgcdd")
     parser.add_argument("--cond_epochs", default=100, type=int)
     parser.add_argument(
         "--dname",

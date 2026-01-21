@@ -7,7 +7,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from tqdm import tqdm 
 from collections import defaultdict
-from lib_cond import AHGCondX,AHGCond
+from lib_cond import AHGCDDX,AHGCDD
 from lib_utils.utils import fix_seed,result_printer
 from lib_utils.metrics import evaluate
 from lib_utils.exp_agent import parse_model
@@ -30,10 +30,10 @@ def multi_seed_train_eval(data,args):
 
         masks=data.generate_random_split(train_ratio=args.train_prop,val_ratio=args.valid_prop,seed=seed)
 
-        if args.cond_method == 'ahgcond':
-            agent = AHGCond(data,masks,args)
-        elif args.cond_method == 'ahgcondx':
-            agent = AHGCondX(data,masks,args)
+        if args.cond_method == 'ahgcdd':
+            agent = AHGCDD(data,masks,args)
+        elif args.cond_method == 'ahgcddx':
+            agent = AHGCDDX(data,masks,args)
         else:
             raise NotImplementedError
 

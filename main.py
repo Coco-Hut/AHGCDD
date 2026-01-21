@@ -13,7 +13,7 @@ from lib_utils.exp_agent import parse_model
 from lib_dataset.data_base import HyperDataset
 from lib_dataset.preprocessing import data_processing
 from parameter_parser import method_config, set_task_args, parameter_parser
-from lib_cond import AHGCond, AHGCondX
+from lib_cond import AHGCDD, AHGCDDX
 
 
 def multi_seed_train_eval(data, args):
@@ -26,10 +26,10 @@ def multi_seed_train_eval(data, args):
             train_ratio=args.train_prop, val_ratio=args.valid_prop, seed=seed
         )
 
-        if args.cond_method == "ahgcond":
-            agent = AHGCond(data, masks, args)
-        elif args.cond_method == "ahgcondx":
-            agent = AHGCondX(data, masks, args)
+        if args.cond_method == "ahgcdd":
+            agent = AHGCDD(data, masks, args)
+        elif args.cond_method == "ahgcddx":
+            agent = AHGCDDX(data, masks, args)
         else:
             raise NotImplementedError
 

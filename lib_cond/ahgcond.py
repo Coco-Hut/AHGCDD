@@ -680,9 +680,9 @@ class AHGCondBase:
         return result
 
 
-class AHGCond(AHGCondBase):
+class AHGCDD(AHGCondBase):
     def __init__(self, data, masks, args):
-        super(AHGCond, self).__init__(data, masks, args)
+        super(AHGCDD, self).__init__(data, masks, args)
 
     def reduce(self, data):
         best_val = -1
@@ -768,9 +768,9 @@ class AHGCond(AHGCondBase):
         return self.cond_data
 
 
-class AHGCondX(AHGCondBase):
+class AHGCDDX(AHGCondBase):
     def __init__(self, data, masks, args):
-        super(AHGCondX, self).__init__(data, masks, args)
+        super(AHGCDDX, self).__init__(data, masks, args)
 
     def reduce(self, data):
         es_flag = 0
