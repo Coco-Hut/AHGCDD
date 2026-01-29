@@ -1,4 +1,3 @@
-# 编写压缩数据train_eval框架
 import time
 import copy
 import numpy as np
