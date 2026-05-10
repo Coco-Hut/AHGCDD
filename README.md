@@ -1,5 +1,5 @@
-# AHGCDD
-This is the official PyTorch implementation of AHGCDD.
+# Anchor-guided Hypergraph Condensation with Dual-level Discrimination (ICML2026)
+This is the official PyTorch implementation of AHGCDD, an efficient hypergraph condensation framework based on anchor-guided hyperedge synthesis and multi-level discriminative optimization.
 
 ## Environment Requirement
 
